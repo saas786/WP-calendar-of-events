@@ -20,16 +20,17 @@ require_once ($dfw_agenda_dir . 'admin/agenda-metabox.php');
 add_theme_support('post-thumbnails');
 
 // Load scripts in back-end
-function dfw_agenda_admin_scripts() {
-    global $dfw_scripts_dir;
-    wp_register_style('agenda-admin', $dfw_scripts_dir . 'css/agenda-admin-styles.css');
-    wp_enqueue_style('agenda-admin');
-    wp_enqueue_script('jquery-ui-core');
-    wp_enqueue_script('jquery-ui-datepicker');
-    wp_register_style('jquery-ui-agenda-styles', $dfw_scripts_dir . 'css/agenda-jquery-ui-styles.css');
-    wp_enqueue_style('jquery-ui-agenda-styles');
+function dfw_agenda_front_scripts() {
+    if (get_post_type() == 'agenda' && !is_single()) {
+        global $dfw_scripts_dir;
+        wp_enqueue_script('jquery-ui-core');
+        wp_register_style('fullcalendar-styles', $dfw_scripts_dir . 'css/fullcalendar.css');
+        wp_enqueue_style('fullcalendar-styles');
+        wp_register_script('fullcalendar-scripts', $dfw_scripts_dir . 'js/fullcalendar.min.js');
+        wp_enqueue_script('fullcalendar-scripts');
+    }
 }
-add_action('admin_enqueue_scripts', 'dfw_agenda_admin_scripts');
+add_action('wp_enqueue_scripts', 'dfw_agenda_front_scripts');
 
 // Load scripts in front-end
 function dfw_agenda_front_scripts() {
