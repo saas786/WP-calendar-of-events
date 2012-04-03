@@ -1,0 +1,10 @@
+#menu-posts-agenda .wp-menu-image {background: url(../images/agenda_16_icon.png) no-repeat 7px -27px !important}
+#menu-posts-agenda:hover .wp-menu-image, #menu-posts-agenda.wp-has-current-submenu .wp-menu-image {background-position:7px 7px !important}
+#icon-edit.icon32-posts-agenda {background: url(../images/agenda_32_icon.png) no-repeat 4px 0 !important}
+#dfw-agenda-metabox h4 {font:normal 15px/16px Georgia,"Times New Roman","Bitstream Charter",Times,serif;margin:10px 0 5px;padding-bottom:5px;border-bottom:1px solid #DFDFDF;}
+#dfw-agenda-metabox th {text-align:left;vertical-align:top;padding-top:4px;}
+#dfw-agenda-metabox th label {width:120px;display:block;}
+#dfw-agenda-box-wrap {background:#fff;padding:5px 10px;border:1px solid #DFDFDF;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+#dfw_agenda_date {width:100px}
+.dfw-agenda-date-select {width:50px}
+.dfw-agenda-metabox {margin:0 0 20px;}

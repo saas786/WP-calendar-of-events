@@ -1,0 +1,9 @@
+/* Float */
+.clear {clear:both;}
+.group:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+* html .group, *:first-child+html .group {zoom:1;}
+.float-left {float:left;}
+.float-right {float:right;}
+
+/* WP-calendar-of-events */
+.agenda-column {font-size:13px;width:300px;}
